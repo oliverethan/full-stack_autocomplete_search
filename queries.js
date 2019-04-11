@@ -12,7 +12,7 @@ const getSuggestions = (request, response) => {
 
   console.log(suggestion);
 
-  var querystring = 'SELECT * FROM suggestions WHERE name LIKE \'' + suggestion + '%\' ORDER BY suggestion_id ASC'
+  var querystring = 'SELECT * FROM suggestions WHERE name ILIKE \'' + suggestion + '%\' ORDER BY suggestion_id ASC'
 
 
   pool.query( querystring, (error, results) => {
