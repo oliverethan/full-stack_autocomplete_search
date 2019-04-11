@@ -1,9 +1,11 @@
-drop table if exists suggestions;
-drop table if exists drugs;
-drop table if exists mechanisms;
 drop table if exists mechanismof;
 drop table if exists suggestions;
 drop table if exists developmentstatus;
+drop table if exists drugs;
+drop table if exists mechanisms;
+
+drop table if exists suggestions;
+
 
 CREATE TABLE drugs (
         d_id int not null primary key,
