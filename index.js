@@ -21,6 +21,8 @@ app.get('/', (request, response) => {
 
 app.get('/suggestions', db.getSuggestions)
 
+app.get('/drug', db.getDrug)
+app.get('/dlist', db.getDruglist)
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
