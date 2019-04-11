@@ -41,6 +41,11 @@ function generatelist(){
 
          $(document).on("click", "li" , function() {
            var item = suggestions[$(this).index()];
+           console.log(item);
+           if(item.type == "drug"){
+                window.location = 'http://localhost:3000/drug.html?d_id=' + item.suggestion_id;
+           }
+
         });
 
 }
