@@ -45,6 +45,10 @@ function generatelist(){
            if(item.type == "drug"){
                 window.location = 'http://localhost:3000/drug.html?d_id=' + item.suggestion_id;
            }
+           else{
+                  window.location = 'http://localhost:3000/druglist.html?m_id=' + item.suggestion_id;
+
+           }
 
         });
 

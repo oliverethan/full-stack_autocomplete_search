@@ -40,6 +40,9 @@ function displayDrug(drug){
         document.getElementById("generic").innerHTML = drug[0].name_generic;
         document.getElementById("brand").innerHTML = drug[0].name_brand;
 
+        for(var i = 0; i < drug.length; i++){
+              document.getElementById("mech").innerHTML+= drug[i].m_name + " ";
+        }
 
 
 

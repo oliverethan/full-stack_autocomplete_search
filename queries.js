@@ -29,7 +29,11 @@ const getDrug = (request, response) => {
 
   console.log(d_id);
 
-  var querystring = 'select * from drugs where d_id =' + d_id;
+ // var querystring = 'select d.*, m.name from drugs d join mechanismof mo on d.d_id = mo.d_id join mechanisms m on m.m_id = mo.m_id where d.d_id =' + d_id +';'
+
+
+var querystring = 'select m.name as m_name, d.*  from drugs d join mechanismof mo on d.d_id = mo.d_id join mechanisms m on m.m_id = mo.m_id where d.d_id =' + d_id + ';'
+
 
 
   pool.query( querystring, (error, results) => {
