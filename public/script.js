@@ -1,6 +1,6 @@
 
 
-
+var suggestions;
 
 function suggestion(val){
 
@@ -18,8 +18,8 @@ function suggestion(val){
         {
         if(http.readyState == 4 && http.status == 200) {
 
-               var suggestions = JSON.parse(http.responseText);
-               generatelist(suggestions);
+              suggestions  = JSON.parse(http.responseText);
+               generatelist();
 
 
         }
@@ -30,13 +30,17 @@ function suggestion(val){
 
 }
 
-function generatelist(suggestions){
+function generatelist(){
 
-        $('#list').empty()
+        $('li').unbind("click");
+        $('#list').empty();
 
         for(var i = 0; i < suggestions.length; i++ ){
-                $('<li>'+ suggestions[i].name + '</li>').appendTo('#list');
+                $('<li>'+ suggestions[i].name + ' (' + suggestions[i].type +  ')</li>').appendTo('#list');
         }
 
+         $(document).on("click", "li" , function() {
+           var item = suggestions[$(this).index()];
+        });
 
 }
