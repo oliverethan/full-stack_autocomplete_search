@@ -21,3 +21,20 @@ An autocomplete search bar with client server and database implemented. Designed
 * Service Specification (API Doc) depicting the parameters that are sent to each service calls and the response from those calls (see blank template below).
 * Data model depicting the entities and their fields that are stored in the data tier (see source data below).
 * High level architecture diagram depicting the different technologies you would employ to accomplish the design. This is your chance to show us your experience with web technologies, so we recommend you pick technologies you are most familiar with.
+
+## Design
+
+### Sequence Diagram
+
+![Alt text](images/sequence_diagram.png?raw=true "Title")
+
+### E/R Diagram (BCNF)
+
+![Alt text](images/er_diagram.png?raw=true "Title")
+
+### Architecture Diagram
+
+![Alt text](images/architecture.png?raw=true "Title")
+
+The front end of the application could be designed using the basic tools listed above. If the application needed to be expanded the Angular framework could be used for additional functionality. The server could be designed using nodeJS and the express framework to easily handle the requests and responses. PostgreSQL is a solid relational database framework that I'm familiar with.
+
