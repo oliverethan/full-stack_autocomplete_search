@@ -2,8 +2,8 @@ const Pool = require('pg').Pool
 const pool = new Pool({
   user: 'me',
   host: 'localhost',
-  database: 'api',
-  password: 'a10Ethan',
+  database: '<DBNAME',
+  password: '<PASSWORD>',
   port: 5432,
 })
 const getSuggestions = (request, response) => {
